@@ -8,8 +8,8 @@ class cons{
 	float num;
 	String str;
 	cons(float n,String s){
-		num=n;
-		str=s;
+		this.num=n;
+		this.str=s;
 	}
 	void func(){
 		System.out.println(num+" "+str);
