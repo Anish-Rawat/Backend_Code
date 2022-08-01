@@ -1,0 +1,20 @@
+/* Example of default constructor that displays the default values
+
+*******The default constructor is used to provide the default values to the object like 0, null, etc., depending on the type.********
+
+*/
+
+class default_value{
+	int num;
+	String str;
+	void method(){
+		System.out.println(num+" "+str);
+	}
+}
+
+class display_value{
+	public static void main(String args[]){
+		default_value obj1=new default_value();
+		obj1.method();
+	}
+}
