@@ -1,0 +1,27 @@
+/* Constructor program with parameter
+
+*****The parameterized constructor is used to provide different values to distinct objects. However, you can provide the same values also.*****
+
+*/
+
+class cons{
+	float num;
+	String str;
+	cons(float n,String s){
+		num=n;
+		str=s;
+	}
+	void func(){
+		System.out.println(num+" "+str);
+	}
+}
+
+class Main{
+	public static void main(String args[]){
+		cons obj1=new cons(100.5f,"Anish");         // for floating value we need to add "f" with floating number but it is not neccessary to add "d" with double number.
+		cons obj2=new cons(9.5f,"Manish");
+		
+		obj1.func();
+		obj2.func();
+	}
+}
