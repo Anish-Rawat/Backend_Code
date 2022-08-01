@@ -1,0 +1,14 @@
+// First Constructor program without parameter
+
+class anish{
+	String str;
+	int age;
+	anish(){
+		System.out.println("Hey hello!!");
+	}
+}
+class rawat{
+	public static void main(String args[]){
+		anish obj=new anish();
+	}
+}
