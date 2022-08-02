@@ -1,0 +1,44 @@
+/*
+	Create a class named 'Rectangle' with two data members- length and breadth and a function to calculate the area which is 'length*breadth'.
+  The class has three constructors which are :
+	1 - having no parameter - values of both length and breadth are assigned zero.
+	2 - having two numbers as parameters - the two numbers are assigned as length and breadth respectively.
+	3 - having one number as parameter - both length and breadth are assigned that number.
+	Now, create objects of the 'Rectangle' class having none, one and two parameters and print their areas.
+*/
+
+class rectangle{
+	float length;
+	float breath;
+	
+	rectangle(){
+		length = 0;
+		breath = 0;
+	}
+	
+	rectangle(float l,float b){
+		length = l;
+		breath = b;
+	}
+	
+	rectangle(float val){
+		length = val;
+		breath = val;
+	}
+	
+	void area(){
+		System.out.println("Area of rectangle is "+length*breath);
+	}
+}
+
+class rec_area{
+	public static void main(String args[]){
+		rectangle obj1 = new rectangle();
+		rectangle obj2 = new rectangle(5f,4f);
+		rectangle obj3 = new rectangle (5f);
+		
+		obj1.area();
+		obj2.area();
+		obj3.area();
+	}
+}
