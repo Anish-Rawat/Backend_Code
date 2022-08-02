@@ -1,0 +1,39 @@
+// Constructor overloading
+
+class cons_overload{
+	int num;
+	float val;
+	String str;
+	
+	cons_overload(int n,String s){
+		this.num=num;
+		this.str=s;
+	}
+	
+	cons_overload(float v,int n){
+		this.val=v;
+		this.num=n;
+	}
+	
+	cons_overload(float v,String s,int n){
+		this.val=v;
+		this.str=s;
+		this.num=n;
+	}
+	
+	void display(){
+		System.out.println("age "+num+" Name "+str+" marks "+val);
+	}
+}
+
+class constructor_overloading{
+	public static void main(String args[]){
+		cons_overload obj1=new cons_overload(20,"Anish");
+		cons_overload obj2=new cons_overload(10.2f,22);
+		cons_overload obj3=new cons_overload(43.4f,"Manish",28);
+		
+		obj1.display();
+		obj2.display();
+		obj3.display();
+	}
+}
