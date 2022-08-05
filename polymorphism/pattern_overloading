@@ -1,0 +1,23 @@
+package Polymorphism;
+
+class pattern {
+    void display(){
+        for(int i=0;i<5;i++){
+            System.out.print("*");
+        }
+    }
+    void display(char c){
+        for(int i=0;i<5;i++){
+            System.out.print(c);
+        }
+    }
+}
+
+public class pattern_overloading{
+    public static void main(String args[]){
+        pattern obj=new pattern();
+        obj.display();
+        System.out.println();
+        obj.display('A');
+    }
+}
