@@ -1,0 +1,24 @@
+package Polymorphism;
+
+class pattern1{
+    public void display(){
+        for(int i=0;i<5;i++){
+            System.out.print("*");
+        }
+    }
+}
+
+class derived_pattern1 extends pattern1{
+    public void display() {
+        for (int i = 0; i < 5; i++) {
+            System.out.print("B");
+        }
+    }
+}
+
+public class pattern_overriding{
+    public static void main (String[] args){
+        pattern1 obj = new derived_pattern1();
+        obj.display();
+    }
+}
