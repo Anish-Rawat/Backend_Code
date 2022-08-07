@@ -1,0 +1,31 @@
+package Polymorphism;
+
+class type_para{
+    float m=0;
+    float multiply(int a,int b){
+        m=a*b;
+        return m;
+    }
+    float multiply(int a,float b){
+        m=a*b;
+        return m;
+    }
+    float multiply(float a,float b){
+        m=a*b;
+        return m;
+    }
+    float multiply(float a,int b){
+        m=a*b;
+        return m;
+    }
+}
+
+public class type_para_overloading {
+    public static void main(String args[]){
+        type_para obj = new type_para();
+        System.out.println("Multiplication of two number is : "+obj.multiply(5,5));
+        System.out.println("Multiplication of two number is : "+obj.multiply(5.0f,5.0f));
+        System.out.println("Multiplication of two number is : "+obj.multiply(5,6.0f));
+        System.out.println("Multiplication of two number is : "+obj.multiply(5.0f,6));
+    }
+}
