@@ -1,0 +1,56 @@
+/*
+	Create a class named 'Member' having the following members:
+	Data members
+	1 - Name
+	2 - Age
+	3 - Phone number
+	4 - Address
+	5 - Salary
+	It also has a method named 'printSalary' which prints the salary of the members.
+	Two classes 'Employee' and 'Manager' inherits the 'Member' class. The 'Employee' and 'Manager' classes have data members 'specialization' and 'department' respectively. Now, assign name, age, phone number, address and salary to an employee and a manager by making an object of both of these classes and print the same.
+*/
+
+class member{
+	String name;
+	int age;
+	String phone_number;
+	String address;
+	float salary;
+	
+	void printSalary(){
+		System.out.println(salary);
+	}
+}
+
+class employee extends member{
+	String specialization;
+}
+
+class manager extends member{
+	String department;
+}
+
+class office_detail{
+	public static void main(String args[]){
+		employee obj1 = new employee();
+		manager obj2 = new manager();
+		
+		obj1.name="Anish Rawat";
+		obj1.age=23;
+		obj1.phone_number="9872014099";
+		obj1.address="2003/1 sector 40c chandigarh";
+		obj1.salary=109100.00f;
+		obj1.specialization="Software Engineer";
+		
+		System.out.println("Name : "+obj1.name+" Age : "+obj1.age+" Phone NUmber : "+obj1.phone_number+" Address : "+obj1.address+"Salary : "+printSalary()+" Specialization : "+obj1.specialization);
+		
+		obj2.name="Manish Rawat";
+		obj2.age=28;
+		obj2.phone_number="9780681141";
+		obj2.address="2002/2 sector 40b chandigarh";
+		obj2.salary=105100.00f;
+		obj2.department="HYLA";
+		
+		System.out.println("Name : "+obj2.name+" Age : "+obj2.age+" Phone NUmber : "+obj2.phone_number+" Address : "+obj2.address+"Salary : "+printSalary()+" Specialization : "+obj2.department);
+	}
+}
