@@ -1,0 +1,28 @@
+package inheritance;
+
+class base{
+    void base_display(){
+        System.out.println("Base method called.");
+    }
+}
+
+class derived1 extends base{
+    void derived1_display(){
+        System.out.println("derived 1 method called.");
+    }
+}
+
+class derived2 extends derived1{
+    void derived2_display(){
+        System.out.println("derived 2 method called.");
+    }
+}
+
+public class inheriMain {
+    public static void main(String[] args){
+        derived2 obj = new derived2();
+        obj.base_display();
+        obj.derived1_display();
+        obj.derived2_display();
+    }
+}
