@@ -1,0 +1,44 @@
+// ATM Machine
+
+import java.util.Scanner;
+
+class ATM{
+	int Balance=10000,deposit,withrawn;
+	public static void main(String args[]){
+		ATM obj = new ATM();
+		Scanner i = new Scanner(System.in);
+		while(true){
+			System.out.println("Press 1 for deposit a money.");
+			System.out.println("Press 2 for withrawn a money.");
+			System.out.println("Press 3 for check balance.");
+			System.out.println("Press 4 for exit.");
+			
+			System.out.println();
+			System.out.print("Which operation you want to perform ? ");
+			int choice = i.nextInt();
+			switch(choice){
+				case 1 :
+				System.out.println();
+				System.out.print("How much amount you want to deposit : ");
+				obj.deposit = i.nextInt();
+				System.out.println("Your amount has been succesfully deposited.");
+				break;
+				
+				case 2 :
+				System.out.print("How much amount you want to withrawn : ");
+				obj.withrawn = i.nextInt();
+				System.out.println();
+				System.out.println("Thank you for visiting , please collect your cash.");
+				break;
+				
+				case 3 :
+				System.out.println("Available balance : "+obj.Balance);
+				System.out.println("Thank you for visiting.");
+				break;
+				
+				case 4 : 
+				System.exit(0);
+			}
+		}
+	}
+}
