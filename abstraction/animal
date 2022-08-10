@@ -1,0 +1,40 @@
+package abstraction;
+
+abstract class Animal{
+    abstract void sound();
+    void leg(){
+        System.out.println("Having 4 legs.");
+    }
+}
+
+class Dog extends Animal{
+    void sound(){
+        System.out.println("Bark");
+    }
+    void breed(){
+        System.out.println("There are many breeds of dog.");
+    }
+}
+
+class Lion extends Animal{
+    void sound(){
+        System.out.println("Roar");
+    }
+    void personality(){
+        System.out.println("King of a jungle.");
+    }
+}
+
+public class AnimalMain {
+    public static void main(String args[]){
+        Dog d = new Dog();
+        Lion l = new Lion();
+        System.out.println("        ABOUT DOG       ");
+        d.sound();
+        d.breed();
+        System.out.println();
+        System.out.println("        ABOUT Lion       ");
+        l.sound();
+        l.personality();
+    }
+}
