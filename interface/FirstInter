@@ -1,0 +1,30 @@
+package Interface;
+
+interface Mammals{
+    void func1();
+}
+
+interface MarineAnimals{
+    void func2();
+}
+
+class BlueWhale implements Mammals,MarineAnimals{
+    public void func1(){
+        System.out.println("I am mammal.");
+    }
+    public void func2(){
+        System.out.println("I am a marine animal.");
+    }
+    void func3(){
+        System.out.println("I belong to both the categories: Mammals as well as Marine Animals");
+    }
+}
+
+public class FirstInter {
+    public static void main(String[] args){
+        BlueWhale b = new BlueWhale();
+        b.func1();
+        b.func2();
+        b.func3();
+    }
+}
