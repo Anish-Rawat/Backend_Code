@@ -1,0 +1,25 @@
+// Write an abstract class Pen with method write and refill as abstract method.
+
+package abstraction;
+
+abstract class Pen{
+    abstract void write();
+    abstract void refill();
+}
+
+class DerivedPen extends Pen{
+    void write(){
+        System.out.println("This is a ball pen (Written in write method).");
+    }
+    void refill(){
+        System.out.println("This pen cannot be refill after used (Written in refill method).");
+    }
+}
+
+public class PenMain {
+    public static void main(String[] args){
+        DerivedPen obj = new DerivedPen();
+        obj.write();
+        obj.refill();
+    }
+}
