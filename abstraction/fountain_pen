@@ -1,0 +1,29 @@
+// Write an abstract class Pen2 with method write and refill as abstract method. Create a concatenate class FountainPen with additional method ChangeNib
+
+package abstraction;
+
+abstract class Pen2{
+    abstract void write();
+    abstract void refill();
+}
+
+class FountainPen extends Pen2{
+    void write(){
+        System.out.println("This is a ball pen (Written in write method).");
+    }
+    void refill(){
+        System.out.println("This pen cannot be refill after used (Written in refill method).");
+    }
+    void ChangeNib(){
+        System.out.println("Nib is not changable.");
+    }
+}
+
+public class FountainPenMain {
+    public static void main(String[] args){
+        FountainPen obj = new FountainPen();
+        obj.write();
+        obj.refill();
+        obj.ChangeNib();
+    }
+}
