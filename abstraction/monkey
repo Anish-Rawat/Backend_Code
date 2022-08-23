@@ -1,0 +1,42 @@
+/* create a class Monkey with jump() method bike() methods. Create a class Human which inherits this Monkey class and implements BasicAnimal
+   interface with eat() and sleep() methods.
+ */
+
+package abstraction;
+
+class Monkey{
+    void jump(){
+        System.out.println("Monkey jump = 7 foot");
+    }
+    void bite(){
+        System.out.println("Bike Force = 500 psi");
+    }
+}
+
+interface BasicAnimal{
+    void sleep();
+    void eat();
+}
+
+class Human extends Monkey implements BasicAnimal{
+    void speak(){
+        System.out.println("Human can speak");
+    }
+    public void sleep(){
+        System.out.println("Average Speeing = 6 hours");
+    }
+    public void eat(){
+        System.out.println("Vegetarian");
+    }
+}
+
+public class MonkeyMain {
+    public static void main(String[] args){
+        Human obj = new Human();
+        obj.jump();
+        obj.bite();
+        obj.speak();
+        obj.sleep();
+        obj.eat();
+    }
+}
