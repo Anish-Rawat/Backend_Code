@@ -1,0 +1,35 @@
+/*
+    create a class telephone with a ring(),left(), disconnect() method as abstract methods.create another class SmartTelephone and demonstrate polymorphism.
+ */
+
+package abstraction;
+
+abstract class Telephone{
+    abstract void ring();
+    abstract void left();
+    abstract void disconnect();
+}
+
+class Smartphone extends Telephone{
+    void ring(){
+        System.out.println("Ring for 1 min.");
+    }
+    void left(){
+        System.out.println("Click left for leave.");
+    }
+    void disconnect(){
+        System.out.println("touch red dot for disconnect");
+    }
+    void whatsapp(){
+        System.out.println("Whatsapp is supported in smartphones.");
+    }
+}
+public class TelephoneMain {
+    public static void main(String args[]){
+        Telephone obj = new Smartphone();
+        obj.ring();
+        obj.disconnect();
+        obj.left();
+        // obj.whatsapp(); cannot use whatsapp method because the reference is Telephone which does not have whatsapp method
+    }
+}
