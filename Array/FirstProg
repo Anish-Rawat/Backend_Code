@@ -13,5 +13,6 @@ public class FirstProg {
         for(int i=0;i<5;i++) {
             System.out.println(num[i]);
         }
+        System.out.println("Length of the array is "+num.length);
     }
 }
