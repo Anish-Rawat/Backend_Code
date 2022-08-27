@@ -1,0 +1,31 @@
+// Create a array of 5 floats and calculate their sum
+
+package Array;
+import java.util.Scanner;
+
+class FloatNum{
+    float[] num = new float[5];
+    float sum = 0.0f;
+    void input(){
+        System.out.println("Enter array : ");
+        Scanner obj = new Scanner(System.in);
+        num[0] = obj.nextFloat();
+        num[1] = obj.nextFloat();
+        num[2] = obj.nextFloat();
+        num[3] = obj.nextFloat();
+        num[4] = obj.nextFloat();
+    }
+    void sum(){
+        for(int i=0;i<num.length;i++){
+            sum = sum + num[i];
+        }
+        System.out.print("Sum of all float num are : " +sum);
+    }
+}
+public class FloatSum {
+    public static void main(String[] args){
+        FloatNum fb = new FloatNum();
+        fb.input();
+        fb.sum();
+    }
+}
