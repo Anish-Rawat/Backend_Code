@@ -6,7 +6,7 @@ class cons_overload{
 	String str;
 	
 	cons_overload(int n,String s){
-		this.num=num;
+		this.num=n;
 		this.str=s;
 	}
 	
