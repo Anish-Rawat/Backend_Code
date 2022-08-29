@@ -1,0 +1,36 @@
+// Write a program to find out whether a given integer is present in an array or not.
+
+package Array;
+import java.util.Scanner;
+
+class FindBase{
+    int[] Integer = new int[10];
+
+    void input(){
+        System.out.println("Enter integer : ");
+        Scanner obj = new Scanner(System.in);
+        for(int i=0;i<Integer.length;i++){
+            Integer[i] = obj.nextInt();
+        }
+    }
+    void Find(int num){
+        for(int j=0;j<Integer.length;j++){
+            if(num==Integer[j]){
+                System.out.println("Entered element/Integer present in array list in "+j+" Index");
+                break;
+            }
+        }
+    }
+}
+
+public class FindInteger {
+    public static void main(String[] args){
+        int num;
+        FindBase In = new FindBase();
+        Scanner obj = new Scanner(System.in);
+        In.input();
+        System.out.print("Which element/ integer you want to find : ");
+        num = obj.nextInt();
+        In.Find(num);
+    }
+}
