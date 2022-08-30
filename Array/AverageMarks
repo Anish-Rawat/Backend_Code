@@ -1,0 +1,34 @@
+// Calculate the average marks from an array containing marks of all students in physics using for-each loop.
+
+package Array;
+import java.util.Scanner;
+
+class Average{
+    int sum = 0;
+    int[] student_marks = new int[5];
+    Scanner obj = new Scanner(System.in);
+    void InTake(){
+        System.out.println("Enter Students marks in physics : ");
+        for(int i=0;i<student_marks.length;i++) {
+            student_marks[i] = obj.nextInt();
+        }
+    }
+    void Avg(){
+        for(int i=0;i<student_marks.length;i++){
+            sum=sum+student_marks[i];
+        }
+//        for(int mar : student_marks){                 // Show error when using for-each loop
+//            sum=sum+student_marks[mar];
+//        }
+        System.out.println("Sum : "+sum);
+        System.out.println("Average of all students marks in physics : "+(sum*100/500));
+    }
+}
+
+public class AverageMarks {
+    public static void main(String[] args){
+        Average ob = new Average();
+        ob.InTake();
+        ob.Avg();
+    }
+}
