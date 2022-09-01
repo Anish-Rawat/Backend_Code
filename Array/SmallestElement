@@ -1,0 +1,36 @@
+// Write a java program to find an smallest number in an array
+
+package Array;
+import java.util.Scanner;
+
+class Smallest{
+    float[] Elements =  new float[10];
+
+    Scanner obj =  new Scanner(System.in);
+
+    void InTake(){
+        System.out.println("Enter Elements : ");
+        for(int i=0;i<Elements.length;i++){
+            Elements[i]=obj.nextFloat();
+        }
+    }
+
+    void Result(){
+        float  min = Elements[0];
+        for(int i=0;i<Elements.length;i++){
+            if(min>Elements[i]){
+                min = Elements[i];
+            }
+        }
+        System.out.println("Minimunm element in array is "+min);
+    }
+}
+
+public class SmallestElement {
+    public static void main(String[] args){
+        Smallest ob = new Smallest();
+
+        ob.InTake();
+        ob.Result();
+    }
+}
