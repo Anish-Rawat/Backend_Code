@@ -1,0 +1,12 @@
+import java.io.*;
+class House extends Thread {
+	public void run()
+	{
+		System.out.print("Welcome to my house.");
+	}
+	public static void main(String[] args)
+	{
+		House h = new House(); // creating thread
+		h.start(); // starting thread
+	}
+}
