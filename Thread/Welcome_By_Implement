@@ -1,0 +1,19 @@
+import java.io.*;
+class House implements Runnable {
+
+    public void run()
+    {
+        System.out.println("Welcome to my house");
+    }
+    
+    public static void main(String args[])
+    {
+        House h = new House();      // create an object of Runnable target
+  
+        Thread t = new Thread(h, "h");      // pass the runnable reference to Thread
+  
+        t.start();        // start the thread
+  
+        System.out.println(t.getName());
+    }
+}
