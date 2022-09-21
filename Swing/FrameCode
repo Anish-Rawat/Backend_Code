@@ -1,0 +1,35 @@
+package Swing;
+
+import javax.swing.*;
+import java.awt.*;          // We import AWT package because we need Container class of AWT in our program.
+
+public class FrameCode {
+    public static void main(String[] args){
+        JFrame frame = new JFrame();        // we create an object of JFrame class
+        frame.setVisible(true);             // call set visible function using frame object to make frame visible by default it is false
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);       // call setDefaultCloseOperation function using frame object to terminate a program by clicking on close button (Top Right Corner)
+
+        /*
+        frame.setSize(1000,500);            // To set size of frame
+        frame.setLocation(250,250);                 // To set location of frame on window
+        */
+
+        frame.setBounds(250,250,1000,500);          // To set size and location of frame simultaneously
+
+        frame.setTitle("This is my first SWING frame program");         // To give title to our frame
+
+        frame.setResizable(false);          // call setResizable method if you dont want to resize the frame by user end , By default it is true we need to false it first.
+
+        Container c = frame.getContentPane();       // The class Container is the super class for the containers of AWT. A container provides a space where a component can be located. A Container in AWT is a component itself and it adds the capability to add component to itself.
+        c.setBackground(Color.RED);
+
+        /*
+            Color color = new Color(255, 0, 0);     // Method 2 :To set background color on frame we need to make object of Color class od Swing
+            c.setBackground(color);
+         */
+
+        ImageIcon icon = new ImageIcon("D:\\Anish Singh Rawat\\Anish Photos\\-   -    ( 1350 X 1080 ).jpg");        // First we need to create an object of class ImageIcon then pass the path as its parameter
+        frame.setIconImage(icon.getImage());        // Then all the function setIconFrame method of swing package and return the image through icon object of ImageIcon
+    }
+}
